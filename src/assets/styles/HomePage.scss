@@ -1,0 +1,130 @@
+@import './variables';
+@import './mixins';
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+
+    .welcome-section {
+        text-align: center;
+        margin: 2rem 0;
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: #6d6875;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #6d6875;
+        }
+    }
+
+    .features-section,
+    .contact-section {
+        background-color: #f2f2f2;
+        border-radius: $border-radius;
+        padding: 2rem;
+        max-width: 600px;
+        box-shadow: $box-shadow;
+    }
+
+    .features-section {
+        h3 {
+            margin-bottom: 1rem;
+            font-family: 'Pacifico', cursive;
+            color: #6d6875;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+
+                &:before {
+                    content: '✓';
+                    margin-right: 8px;
+                    color: #6d6875;
+                }
+            }
+        }
+    }
+
+    .contact-section {
+        h3 {
+            margin-bottom: 1rem;
+            font-family: 'Pacifico', cursive;
+            color: #6d6875;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #6d6875;
+        }
+    }
+
+    .button-section {
+        text-align: center;
+        margin-top: 1.5rem;
+
+        .appointment-text {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #6d6875;
+        }
+
+        .appointment-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.2rem;
+            background-color: #ff95c6;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #e91e63;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page {
+        gap: 1rem;
+    }
+
+    .features-section,
+    .contact-section {
+        padding: 1rem;
+    }
+}
+
+.video-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 40%;
+}
+
+.home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

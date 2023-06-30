@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixins";
+
+.about-container {
+    position: relative;
+    padding: 2rem;
+    margin: 0 auto;
+    min-height: 100vh;
+
+    .about-background {
+        width: 70%; // adjust as needed
+        max-width: 800px; // adjust as needed
+        height: 400px; // fixed height
+        object-fit: contain;
+        display: block;
+        margin: 2rem auto 0; // adjust as needed
+    }
+
+    .about-content {
+        position: relative;
+        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .about-container .about-background {
+        width: 90%; // adjust as needed
+        height: 200px; // adjust as needed for smaller screens
+    }
+}

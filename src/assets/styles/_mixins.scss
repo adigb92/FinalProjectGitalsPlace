@@ -1,0 +1,43 @@
+@mixin text-center {
+    text-align: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint ==small {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==medium {
+        @media (min-width: 768px) and (max-width: 1023px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==large {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}

@@ -1,0 +1,102 @@
+@import "variables";
+@import "mixins";
+
+.admin-dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #6a7994;
+
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: $color-primary;
+    }
+
+    form {
+        .form-group {
+            margin-bottom: 1rem;
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                color: $color-dark;
+            }
+
+            .form-control {
+                padding: 0.5rem;
+                border-radius: 4px;
+                border: 1px solid $color-dark;
+                font-size: 1rem;
+                outline: none;
+                color: $color-dark;
+                width: 100%;
+
+                &:focus {
+                    border-color: $color-primary;
+                }
+            }
+        }
+
+        .btn-primary {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: $color-primary;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: darken($color-primary, 10%);
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+
+        th {
+            background-color: $primary-bg-color;
+            color: $color-primary;
+            padding: 1rem;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid $color-light;
+            vertical-align: middle;
+
+            img {
+                display: block;
+                max-width: 100px;
+                max-height: 100px;
+                margin: 0 auto;
+            }
+        }
+
+        .btn-danger {
+            background-color: $color-danger;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: darken($color-danger, 10%);
+            }
+        }
+    }
+}

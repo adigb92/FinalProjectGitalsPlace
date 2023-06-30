@@ -1,0 +1,54 @@
+@import '_variables';
+@import '_mixins';
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.service {
+    background-color: $color-light;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .service-name {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-image {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border-radius: $border-radius;
+    }
+
+    .service-description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-price {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $color-primary;
+    }
+}
